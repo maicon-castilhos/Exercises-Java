@@ -1,0 +1,10 @@
+package entities;
+
+public class UsedProduct extends Product{
+			private double customsFee;
+
+			public UsedProduct(double customsFee) {
+				super(String name, double price);
+				this.customsFee = customsFee;
+			}
+}

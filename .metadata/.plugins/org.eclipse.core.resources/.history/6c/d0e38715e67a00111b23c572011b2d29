@@ -1,0 +1,42 @@
+package entites;
+
+public class Book {
+	private String title;
+	private String author;
+	private Double pricePerDay;
+
+	public Book() {
+		
+	}
+
+	public Book(String title, String author, Double pricePerDay) {
+		this.title = title;
+		this.author = author;
+		this.pricePerDay = pricePerDay;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public Double getPricePerDay() {
+		return pricePerDay;
+	}
+
+	public void setPricePerDay(Double pricePerDay) {
+		this.pricePerDay = pricePerDay;
+	}
+
+}

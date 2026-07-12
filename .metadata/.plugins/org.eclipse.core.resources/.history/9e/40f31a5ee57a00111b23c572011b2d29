@@ -1,0 +1,59 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entites.Book;
+import entites.Loan;
+import entites.Member;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		Member member = new Member();
+
+		System.out.println("Enter data of client: ");
+		System.out.print("Name: ");
+		String name = sc.nextLine();
+
+		System.out.print("E-mail: ");
+		String email = sc.nextLine();
+
+		System.out.print("Level: ");
+		String MemberLevel = sc.next();
+
+		System.out.print("How many loan to this client? ");
+		int n = sc.nextInt();
+		sc.nextLine();
+
+		for (int i = 0; i < n; i++) {
+
+			System.out.println("Enter loan #" + (i + 1) + " data ");
+			System.out.print("Title? ");
+			System.out.println();
+			String title = sc.nextLine();
+			System.out.print("Author? ");
+			String author = sc.nextLine();
+			System.out.print("Price per day? ");
+			Double pricePerDay = sc.nextDouble();
+			System.out.print("Date for get book? (DD/MM/YYYY): ");
+			LocalDate startDate = LocalDate.parse(sc.next(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+			System.out.print("Date for return book? (DD/MM/YYYY): ");
+			LocalDate due = LocalDate.parse(sc.next(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+
+			Book book = new Book(title, author, pricePerDay);
+			Loan loan = new Loan(startDate, due, book);
+			member.addLoan(loan);
+
+		}
+		System.out.println(member); // chama o toString do Member
+
+		for (Loan loan : member.getLoan()) {
+			System.out.println(loan); // chama o toString do Loan
+		}
+		sc.close();
+	}
+}

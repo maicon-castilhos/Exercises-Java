@@ -1,0 +1,44 @@
+package entites;
+
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
+public class Loan {
+	private LocalDate startDate;
+	private LocalDate due;
+	private Book book;
+	
+	public Loan() {
+		
+	}
+	
+	public Loan(LocalDate startDate, LocalDate due, Book book) {
+		this.startDate = startDate;
+		this.due = due;
+		this.book = book;
+	}
+	public LocalDate getStartDate() {
+		return startDate;
+	}
+	public void setStartDate(LocalDate startDate) {
+		this.startDate = startDate;
+	}
+	public LocalDate getDue() {
+		return due;
+	}
+	public void setDue(LocalDate due) {
+		this.due = due;
+	}
+	public Book getBook() {
+		return book;
+	}
+	public void setBook(Book book) {
+		this.book = book;
+	}
+	public long daysRented() {
+	    return ChronoUnit.DAYS.between(startDate, due); //chronounit DAYS é o tipo de data que quero, dias, meses etc. between( X, y) é a diferença de tempo entre as variaveis
+	}
+	public double totalCost() {
+	    return book.getPricePerDay() * daysRented();		
+	}
+}

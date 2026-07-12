@@ -1,0 +1,54 @@
+import java.util.ArrayList;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Client;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Locale.setDefault(Locale.US);
+
+		System.out.print("Enter number of clients: ");
+		int n = sc.nextInt();
+		ArrayList<Client> client = new ArrayList<>();
+
+		for (int x = 0; x < n; x++) {
+			System.out.println("Client " + (x + 1) + "#");
+			System.out.print("ID: ");
+			int id = sc.nextInt();
+
+			System.out.print("Name: ");
+			sc.nextLine();
+			String name = sc.nextLine();
+
+			System.out.print("E-mail: ");
+			String email = sc.nextLine();
+
+			System.out.print("Points: ");
+			int points = sc.nextInt();
+
+			client.add(new Client(id, name, email, points));
+		}
+
+		System.out.print("Enter client ID to add points: ");
+		int idSearch = sc.nextInt();
+
+		System.out.print("Enter purchase value: ");
+		double purchaseValue = sc.nextDouble();
+
+		Client clientSearch = client.stream().filter(u -> u.getId() == idSearch).findFirst().orElse(null);
+
+		if (clientSearch != null) {
+			clientSearch.addPoints(purchaseValue);
+		} else {
+			System.out.print("Client not found");
+		}
+
+		for (Client e : client)
+			System.out.println(e);
+		sc.close();
+	}
+
+}

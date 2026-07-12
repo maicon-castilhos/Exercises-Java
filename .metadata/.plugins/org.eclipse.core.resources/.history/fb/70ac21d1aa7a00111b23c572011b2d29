@@ -1,0 +1,45 @@
+import java.util.Date;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entites.Book;
+import entites.Member;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner (System.in);
+		
+		System.out.println("Enter data of client: ");
+		System.out.print("Name: ");
+		String name = sc.nextLine();
+		
+		System.out.print("E-mail: ");
+		String email = sc.nextLine();
+
+		System.out.print("Level: ");
+		String MemberLevel = sc.next();
+		
+		System.out.print("How many loan to this client? ");
+		int n = sc.nextInt();
+		for (int i = 0 ; i < n ; i++) {
+			System.out.print("Enter loan #" + (i + 1) + " data ");
+			System.out.println();
+			System.out.print("Title? ");
+			String title = sc.nextLine();
+			System.out.print("Author? ");
+			String author = sc.nextLine();
+			System.out.print("Price per day? ");
+			Double pricePerDay = sc.nextDouble();
+			System.out.print("Date for get book? (DD/MM/YYYY): ");
+			String startDate = sc.nextLine();
+			System.out.print("Date for return book? (DD/MM/YYYY): ");
+			String due = sc.nextLine();
+			
+			Member member = new Member();
+		}
+		
+		sc.close();
+	}
+}

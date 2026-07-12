@@ -1,0 +1,85 @@
+# Sistema de Biblioteca
+
+Aplicação de console desenvolvida em Java que simula o gerenciamento de empréstimos de uma biblioteca.
+
+## Funcionalidades
+
+- Cadastro de membro com nome, email e nível (BASIC ou PREMIUM)
+- Registro de múltiplos empréstimos por membro
+- Cálculo automático do custo por empréstimo com base nos dias e preço por dia
+- Desconto de 10% no total para membros PREMIUM
+- Exibição do débito total do membro
+
+## Tecnologias
+
+- Java 21
+- API de datas moderna (LocalDate, ChronoUnit)
+
+## Como rodar
+
+1. Clone o repositório
+2. Abra no Eclipse ou IntelliJ
+3. Execute a classe `Main.java`
+4. Siga as instruções no console
+
+## Exemplo de uso
+
+```
+Enter data of client:
+Name: João Silva
+E-mail: joao@email.com
+Level: PREMIUM
+How many loan to this client? 1
+Title? Clean Code
+Author? Robert Martin
+Price per day? 15.0
+Date for get book? 01/07/2026
+Date for return book? 08/07/2026
+
+Nome: João Silva | Email: joao@email.com | Total: 94.5
+Loan: Clean Code (Robert Martin), days rented: 7, total cost: 105.0
+```
+US / INGLÊS
+
+# Library System
+
+A Java console application that simulates a library loan management system.
+
+## Features
+
+- Member registration with name, email, and level (BASIC or PREMIUM)
+- Multiple loan registration per member
+- Automatic cost calculation based on rental days and price per day
+- 10% discount on total debt for PREMIUM members
+- Display of member's total debt
+
+## Technologies
+
+- Java 21
+- Modern date API (LocalDate, ChronoUnit)
+
+## How to run
+
+1. Clone the repository
+2. Open in Eclipse or IntelliJ
+3. Run the `Main.java` class
+4. Follow the console instructions
+
+## Usage example
+
+```
+Enter data of client:
+Name: John Smith
+E-mail: john@email.com
+Level: PREMIUM
+How many loan to this client? 1
+Title? Clean Code
+Author? Robert Martin
+Price per day? 15.0
+Date for get book? 01/07/2026
+Date for return book? 08/07/2026
+
+Nome: John Smith | Email: john@email.com | Total: 94.5
+Loan: Clean Code (Robert Martin), days rented: 7, total cost: 105.0
+```
+

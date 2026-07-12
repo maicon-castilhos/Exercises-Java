@@ -1,0 +1,48 @@
+package entites;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import entites.enums.MemberLevel;
+
+public class Member {
+	private String name;
+	private String email;
+	
+	private MemberLevel level;
+	private List<Loan> loans = new ArrayList<>();
+	
+	public Member() {
+			}
+	public Member(String name, String email, MemberLevel level, List<Loan> loan) {
+		this.name = name;
+		this.email = email;
+		this.level = level;
+		this.loans = loan;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public MemberLevel getLevel() {
+		return level;
+	}
+	public void setLevel(MemberLevel level) {
+		this.level = level;
+	}
+	public List<Loan> getLoan() {
+		return loans;
+	}
+	public void addLoan (Loan loan) {
+		loans.add(loan);
+	}
+	
+}
