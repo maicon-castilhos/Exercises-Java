@@ -46,10 +46,10 @@ java NomeDoArquivo
 
 - [x] Lógica básica
 - [x] Estruturas condicionais
-- [ ] Laços de repetição
-- [ ] Orientação a objetos
-- [ ] Coleções (Collections Framework)
-- [ ] Tratamento de exceções
+- [x] Laços de repetição
+- [x] Orientação a objetos
+- [x] Coleções (Collections Framework)
+- [x] Tratamento de exceções
 
 ## 🤝 Contribuições
 
